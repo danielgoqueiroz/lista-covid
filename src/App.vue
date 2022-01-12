@@ -1,17 +1,20 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <img alt="Vue logo" src="./assets/logo.png" href="/img/icons/favicon.ico" />
+    <h1>Seus dados vazaram no Covidômetro de Floripa?</h1>
+    <Busca
+      msg="Descubra se você possui dados vazados no covidometrofloripa (covidometrofloripa.com.br)"
+    />
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import Busca from "./components/Busca.vue";
 
 export default {
   name: "App",
   components: {
-    HelloWorld,
+    Busca,
   },
 };
 </script>
