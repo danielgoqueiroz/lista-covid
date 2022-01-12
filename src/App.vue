@@ -1,19 +1,32 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" href="/img/icons/favicon.ico" />
+    <img
+      alt="Vue logo"
+      src="./assets/logo.png"
+      href="public/img/icons/favicon.ico"
+    />
     <h1>Seus dados vazaram no Covidômetro de Floripa?</h1>
     <Busca
       msg="Descubra se você possui dados vazados no covidometrofloripa (covidometrofloripa.com.br)"
     />
     <div>
       <br /><br /><br /><br /><br /><br /><br /><br />
-      Esta ferramenta é gratuita e criada para que ajudar você a descobrir se o
-      seu nome estava na lista vazada. Não tem ligação com o vazamento, com a
-      Prefeitura de Florianópolis ou com o desenvolvimento do site do
-      Covidômetro. Não tem vínculo com órgãos, empresas ou entidades. A
-      privacidade de dados pessoais é regida por Lei Federal e é um direito de
-      todo cidadão.
-      <br />E-mail para contato: listacovidometro@gmail.com
+      <b-container>
+        Esta ferramenta é gratuita e criada para que ajudar você a descobrir se
+        o seu nome estava na lista vazada. Não tem ligação com o vazamento, com
+        a Prefeitura de Florianópolis ou com o desenvolvimento do site do
+        Covidômetro. Não tem vínculo com órgãos, empresas ou entidades. A
+        privacidade de dados pessoais é regida por Lei Federal e é um direito de
+        todo cidadão.
+      </b-container>
+      <br />
+      <p><strong> Email psra contato: listacovidometro@gmail.com</strong></p>
+      <b-button
+        size="sm"
+        to="https://github.com/danielgoqueiroz/lista-covid"
+        target="_blank"
+        >GitHub</b-button
+      >
     </div>
   </div>
 </template>
