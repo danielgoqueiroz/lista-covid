@@ -5,13 +5,7 @@
         O Covidômetro, ferramenta criada pela Prefeitura de Florianópolis com
         dados de pessoas infectadas por dia na cidade, disponibilizou para
         download um documento com mais de 60 dados pessoais de quem fez o teste
-        para a Covid em postos de saúde e UPAs do município.<br /><br />
-        Esta ferramenta é gratuita e criada para que ajudar você a descobrir se
-        o seu nome estava na lista vazada. Não tenho ligação com o vazamento,
-        com a Prefeitura de Florinópolis ou com o desenvolvimento do site do
-        Covidômetro. Não tenho vínculo com órgãos, empresas ou entidades. A
-        privacidade de dados pessoais é regida por Lei Federal e é um direito de
-        todo cidadão.
+        para a Covid em postos de saúde e UPAs do município.<br />
       </p>
       <strong> Dados vazados:</strong><br />
       <ul>
@@ -41,9 +35,7 @@
           <b-button variant="success" @click="pesquisa()">Pesquisar</b-button>
         </b-input-group-append>
       </b-input-group>
-      <b-jumbotron v-show="showResult" :header="titulo">
-        <!-- <b-button variant="primary" href="#">More Info</b-button> -->
-      </b-jumbotron>
+      <b-jumbotron v-show="showResult" :header="titulo"> </b-jumbotron>
     </b-container>
   </div>
 </template>
