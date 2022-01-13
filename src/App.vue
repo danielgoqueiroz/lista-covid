@@ -3,7 +3,7 @@
     <img
       alt="Vue logo"
       src="./assets/logo.png"
-      href="public/img/icons/favicon.ico"
+      href="public/icons/favicon.ico"
     />
     <h1>Seus dados vazaram no Covidômetro de Floripa?</h1>
     <Busca
@@ -13,14 +13,17 @@
       <br /><br /><br /><br /><br /><br /><br /><br />
       <b-container>
         Esta ferramenta é gratuita e criada para que ajudar você a descobrir se
-        o seu nome estava na lista vazada. Não tem ligação com o vazamento, com
-        a Prefeitura de Florianópolis ou com o desenvolvimento do site do
-        Covidômetro. Não tem vínculo com órgãos, empresas ou entidades. A
-        privacidade de dados pessoais é regida por Lei Federal e é um direito de
-        todo cidadão.
+        o seu nome estava na lista vazada e
+        <br />não tem ligação com o vazamento, com a Prefeitura de Florianópolis
+        ou com o desenvolvimento do site do Covidômetro. <br />
+        Não tem vínculo com órgãos, empresas ou entidades. <br />Também, que não
+        mantém os dados armazenado, apenas a representação criptografada de
+        parte da informação que possobilida fazer a busca. <br />
+        A privacidade de dados pessoais é regida por Lei Federal e é um direito
+        de todo cidadão.
       </b-container>
       <br />
-      <p><strong> Email psra contato: listacovidometro@gmail.com</strong></p>
+      <p><strong> Email para contato: listacovidometro@gmail.com</strong></p>
       <b-button
         size="sm"
         to="https://github.com/danielgoqueiroz/lista-covid"
