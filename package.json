@@ -6,7 +6,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "surge": "npm run build && surge --project ./dist --domain https://listacovidometro.surge.sh/"
+    "deploy": "npm run build && surge --project ./dist --domain https://listacovidometro.surge.sh/"
   },
   "dependencies": {
     "bootstrap": "^5.1.3",
