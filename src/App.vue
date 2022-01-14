@@ -1,10 +1,6 @@
 <template>
   <div id="app">
-    <img
-      alt="Vue logo"
-      src="./assets/logo.png"
-      href="public/icons/favicon.ico"
-    />
+    <img alt="Vue logo" src="./assets/logo.png" />
     <h1>Seus dados vazaram no Covidômetro de Floripa?</h1>
     <Busca
       msg="Descubra se você possui dados vazados no covidometrofloripa (covidometrofloripa.com.br)"
