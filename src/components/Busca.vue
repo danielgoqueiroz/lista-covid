@@ -35,8 +35,22 @@
           <b-button variant="success" @click="pesquisa()">Pesquisar</b-button>
         </b-input-group-append>
       </b-input-group>
-      <b-jumbotron v-show="showResult" :header="titulo"> </b-jumbotron>
     </b-container>
+    <b-modal id="modal-1" title="Resultado">
+      <h3 :style="getStyle()" class="my-4">{{ textResult.toUpperCase() }}</h3>
+      <p>
+        O nome <b>{{ nameUpperCase }} </b>consta como
+        <b :style="getStyle()">{{ textResult.toUpperCase() }}</b> na lista dos
+        dados vazados do Covidômetro.
+      </p>
+      <p>
+        ATENÇÂO: Esta ferramenta apenas verifica se um nome consta ou não na
+        lista vazada do covidômetro. Ela não verifica, caso tenham duas pessoas
+        com o mesmo nome, qual é a que tem dados vazados. No entanto, só constam
+        na lista pessoas que fizeram o teste de covid na rede pública de saúde
+        de Florianópolis/SC.
+      </p>
+    </b-modal>
   </div>
 </template>
 
@@ -71,37 +85,35 @@ export default {
       default: "",
     },
     msg: String,
+    names: {
+      type: Array,
+      default: () => [],
+    },
   },
   methods: {
+    getStyle() {
+      return this.isNameOnList
+        ? { color: "red", textSize: 16 }
+        : { color: "green", textSize: 16 };
+    },
     pesquisa() {
-      this.showResult = false;
-
       if (this.name.length < 3) {
         this.msg = "Nome deve ter no mínimo 3 caracteres";
-        this.showResult = false;
         return;
       }
       this.nameUpperCase = this.name.toUpperCase().trim();
       this.hash = md5(this.nameUpperCase);
       this.isNameOnList = names.indexOf(this.hash) > 1;
-      if (this.response) {
-        this.showResult = true;
-        this.showResult = true;
-        this.textResult = `Nome encontrado na lista.`;
+      console.log(this.names.indexOf(this.hash));
+      console.log(this.isNameOnList);
+      console.log(this.hash);
+      if (this.isNameOnList) {
+        this.textResult = `encontrado`;
+        this.$bvModal.show("modal-1");
       } else {
-        this.showResult = true;
-        this.showResult = true;
-        this.textResult = `Nome não encontrado na lista.`;
+        this.$bvModal.show("modal-1");
+        this.textResult = `não encontrado`;
       }
-    },
-  },
-  computed: {
-    titulo() {
-      if (this.showResult) {
-        if (this.name.length < 3) return "";
-        return this.isNameOnList ? "Nome encontrado" : "Nome não encontrado";
-      }
-      return "";
     },
   },
 };
